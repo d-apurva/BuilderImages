@@ -61,8 +61,7 @@
             "regex": "^[a-z0-9]{3,12}$",
             "validationMessage": "Admin Username must be 3 to 12 alphanumeric characters"
             },            
-            "osPlatform": "Linux",
-            
+            "osPlatform": "Linux"            
           }
         ]
       }
