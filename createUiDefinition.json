@@ -54,7 +54,24 @@
             "name": "clusterName",
             "type": "Microsoft.Compute.UserNameTextBox",
             "label": "Cluster Name",
-            "toolTip": "DNS prefix for the application.",                     
+            "toolTip": "DNS prefix for the application.",
+            "defaultValue": "dockmCluster",                      
+            "osPlatform": "Linux"            
+          },
+          {
+            "name": "installScript",
+            "type": "Microsoft.Compute.UserNameTextBox",
+            "label": "Installation Script Path",
+            "toolTip": "Installation script path.",
+            "defaultValue": "https://raw.githubusercontent.com/d-apurva/Container-Service-ARMTemplate/master/installscript.sh",                      
+            "osPlatform": "Linux"            
+          },
+          {
+            "name": "installCommand",
+            "type": "Microsoft.Compute.UserNameTextBox",
+            "label": "Installation Command",
+            "toolTip": "Installation command.",
+            "defaultValue": "sh installscript.sh",                      
             "osPlatform": "Linux"            
           }
         ]
@@ -66,7 +83,9 @@
 	    "adminPassword": "[basics('sshPublicKey').password]",
 	    "sshPublicKey": "[basics('sshPublicKey').sshPublicKey]",
 	    "authenticationType": "[basics('sshPublicKey').authenticationType]",      
-      "datanodeVmType" : "[steps('clustersize').clusterName]"      
+      "datanodeVmType" : "[steps('clustersize').clusterName]",
+      "installScript" : "[steps('clustersize').installScript]",
+      "installCommand" : "[steps('clustersize').installCommand]"      
       
     }
   }
