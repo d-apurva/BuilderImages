@@ -49,20 +49,20 @@
           "postValidation": "Done"
         },
         "bladeTitle" : "Configurations",
-        "elements" : [
+        "elements" : [          
           {
             "name": "clusterName",
-            "type": "Microsoft.Compute.UserNameTextBox",
-            "label": "Cluster Name",
-            "toolTip": "DNS prefix for the application.",
+            "type": "Microsoft.Common.TextBox",
+            "label": "Cluster Prefix",
             "defaultValue": "dockmCluster",
-            "constraints": {
+            "toolTip": "Prefix for everything this template creates.",
+            "constraints": 
+            {
                 "required": true,
-                "regex": "^[a-z0-9]{3,12}$",
-                "validationMessage": "Admin Username must be 3 to 12 alphanumeric characters"
-	          },                      
-            "osPlatform": "Linux"            
-          },
+                "regex": "^[a-z0-9]{1,30}$",
+                "validationMessage": "Only lowercase alphanumeric characters are allowed, and the value must be 1-30 characters long."
+            }
+        },
           {
             "name": "installScript",
             "type": "Microsoft.Compute.UserNameTextBox",
