@@ -54,7 +54,7 @@
             "name": "clusterName",
             "type": "Microsoft.Common.TextBox",
             "label": "Cluster Prefix",
-            "defaultValue": "dockmCluster",
+            "defaultValue": "dockmcluster",
             "toolTip": "Prefix for everything this template creates.",
             "constraints": 
             {
@@ -72,7 +72,7 @@
             "constraints": 
             {
                 "required": true,
-                "regex": "^https?:\/\/(.*)",
+                "regex": "^(http://|https://)",
                 "validationMessage": "Installation Script Path should begin with http:// OR https:// "
             },                      
             "osPlatform": "Linux"            
