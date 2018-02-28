@@ -65,7 +65,7 @@
         },
           {
             "name": "installScript",
-            "type": "Microsoft.Compute.UserNameTextBox",
+            "type": "Microsoft.Common.TextBox",
             "label": "Installation Script Path",
             "toolTip": "Installation script path.",
             "defaultValue": "https://raw.githubusercontent.com/d-apurva/Container-Service-ARMTemplate/master/installscript.sh",
