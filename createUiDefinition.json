@@ -63,20 +63,22 @@
                 "validationMessage": "Only lowercase alphanumeric characters are allowed, and the value must be 1-30 characters long."
             }
         },
-          {
+        {
             "name": "installScript",
-            "type": "Microsoft.Common.TextBox",
+            "type": "Microsoft.Common.FileUpload",
             "label": "Installation Script Path",
-            "toolTip": "Installation script path.",
-            "defaultValue": "https://raw.githubusercontent.com/d-apurva/Container-Service-ARMTemplate/master/installscript.sh",
-            "constraints": 
-            {
-                "required": true,
-                "regex": "^(http://|https://)",
-                "validationMessage": "Installation Script Path should begin with http:// OR https:// "
-            },                      
-            "osPlatform": "Linux"            
-          },
+            "toolTip": "Installation script path",            
+            "constraints": {              
+              "accept": ".doc,.docx,.xml,application/msword"
+            },
+            "options": {
+              "multiple": false,
+              "uploadMode": "url",
+              "openMode": "text",
+              "encoding": "UTF-8"
+            },
+            "visible": true
+          },          
           {
             "name": "installCommand",
             "type": "Microsoft.Compute.UserNameTextBox",
