@@ -54,13 +54,7 @@
             "name": "clusterName",
             "type": "Microsoft.Compute.UserNameTextBox",
             "label": "Cluster Name",
-            "toolTip": "DNS prefix for the application.",
-            "defaultValue": "dockmCluster",
-            "constraints": {
-            "required": true,
-            "regex": "^[a-z0-9]{3,12}$",
-            "validationMessage": "Admin Username must be 3 to 12 alphanumeric characters"
-            },            
+            "toolTip": "DNS prefix for the application.",                     
             "osPlatform": "Linux"            
           }
         ]
