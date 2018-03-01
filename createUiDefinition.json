@@ -68,6 +68,9 @@
             "type": "Microsoft.Common.FileUpload",
             "label": "Installation Script Path",
             "toolTip": "Installation script path",
+	     "constraints": {              
+              "accept": ".doc,.docx,.xml,application/msword"
+            },
             "options": {
               "multiple": false,
               "uploadMode": "url",
