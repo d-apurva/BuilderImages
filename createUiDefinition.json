@@ -67,7 +67,7 @@
             "name": "installScript",
             "type": "Microsoft.Common.TextBox",
             "label": "Installation Script Path",
-            "defaultValue": "foobar",
+            "defaultValue": "https://raw.githubusercontent.com/d-apurva/Container-Service-ARMTemplate/master/installscript.sh",
             "toolTip": "Installation Script Path!",
             "constraints": {
                 "required": false,
