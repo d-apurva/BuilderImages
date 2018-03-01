@@ -53,9 +53,9 @@
             {
               "name": "clusterName",
               "type": "Microsoft.Common.TextBox",
-              "label": "Cluster Prefix",
+              "label": "Cluster Name",
               "defaultValue": "dockmcluster",
-              "toolTip": "Prefix for everything this template creates.",
+              "toolTip": "Name of cluster this template creates.",
               "constraints": 
               {
                   "required": true,
