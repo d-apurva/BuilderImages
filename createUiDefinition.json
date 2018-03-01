@@ -20,8 +20,7 @@
         {
                 "name": "sshPublicKey",
                 "type": "Microsoft.Compute.CredentialsCombo",
-                "label": {
-                  "authenticationType": "Authentication Type",                  
+                "label": {                                    
                   "sshPublicKey": "SSH Public Key"
                 },
                 "toolTip": {                  
@@ -99,8 +98,7 @@
       "outputs": {
         "location" : "[location()]",      
         "adminUsername": "[basics('adminUsername')]",          
-          "sshPublicKey": "[basics('sshPublicKey').sshPublicKey]",
-          "authenticationType": "[basics('sshPublicKey').authenticationType]",      
+          "sshPublicKey": "[basics('sshPublicKey').sshPublicKey]",                
         "datanodeVmType" : "[steps('clustersize').clusterName]",
         "installScript" : "[steps('clustersize').installScript]",
         "installCommand" : "[steps('clustersize').installCommand]",
