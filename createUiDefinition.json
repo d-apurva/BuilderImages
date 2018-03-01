@@ -65,20 +65,17 @@
         },
         {
             "name": "installScript",
-            "type": "Microsoft.Common.FileUpload",
+            "type": "Microsoft.Common.TextBox",
             "label": "Installation Script Path",
-            "toolTip": "Installation script path",            
-            "constraints": {              
-              "accept": ".doc,.docx,.xml,application/msword"
-            },
-            "options": {
-              "multiple": false,
-              "uploadMode": "url",
-              "openMode": "text",
-              "encoding": "UTF-8"
+            "defaultValue": "foobar",
+            "toolTip": "Installation Script Path!",
+            "constraints": {
+                "required": false,
+                "regex": null,
+                "validationMessage": null
             },
             "visible": true
-          },          
+        },          
           {
             "name": "installCommand",
             "type": "Microsoft.Compute.UserNameTextBox",
