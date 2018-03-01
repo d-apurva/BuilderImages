@@ -19,7 +19,7 @@
         },
         {
                 "name": "sshPublicKey",
-                "type": "Microsoft.Compute.CredentialsCombo",
+                "type": "Microsoft.Common.TextBox",
                 "label": {                                    
                   "sshPublicKey": "SSH Public Key"
                 },
