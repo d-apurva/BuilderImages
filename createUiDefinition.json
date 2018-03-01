@@ -70,7 +70,9 @@
             "toolTip": "Installation script path",
             "options": {
               "multiple": false,
-              "uploadMode": "url",              
+              "uploadMode": "url",
+	      "openMode": "text",
+              "encoding": "UTF-8"
             },
             "visible": true
           },          
