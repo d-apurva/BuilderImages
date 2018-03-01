@@ -67,14 +67,14 @@
             "name": "installScript",
             "type": "Microsoft.Common.FileUpload",
             "label": "Installation Script Path",
-            "toolTip": "Installation script path",
-	     "constraints": {              
+            "toolTip": "Installation script path",            
+            "constraints": {              
               "accept": ".doc,.docx,.xml,application/msword"
             },
             "options": {
               "multiple": false,
               "uploadMode": "url",
-	      "openMode": "text",
+              "openMode": "text",
               "encoding": "UTF-8"
             },
             "visible": true
