@@ -19,11 +19,16 @@
         },
         {
                 "name": "sshPublicKey",
-                "type": "Microsoft.Common.TextBox",
-                "label": {                                    
+                "type": "Microsoft.Compute.CredentialsCombo",
+                "label": {
+                  "authenticationType": "Authentication Type",
+                  "password": "Admin Password",
+                  "confirmPassword": "Confirm Admin Password",
                   "sshPublicKey": "SSH Public Key"
                 },
-                "toolTip": {                  
+                "toolTip": {
+                  "authenticationType": "Which authentication type to use when connecting to the virtual machines: Password or SSH Public Key",
+                  "password": "Password to use for SSH access to the virtual machines",
                   "sshPublicKey": "Public key for passwordless SSH access to the virtual machines. The OpenSSH public key can be generated with tools like ssh-keygen on Linux or OS X."
                 },
                 "constraints": {
@@ -97,8 +102,10 @@
       ],
       "outputs": {
         "location" : "[location()]",      
-        "adminUsername": "[basics('adminUsername')]",          
-          "sshPublicKey": "[basics('sshPublicKey').sshPublicKey]",                
+        "adminUsername": "[basics('adminUsername')]",
+          "adminPassword": "[basics('sshPublicKey').password]",
+          "sshPublicKey": "[basics('sshPublicKey').sshPublicKey]",
+          "authenticationType": "[basics('sshPublicKey').authenticationType]",      
         "datanodeVmType" : "[steps('clustersize').clusterName]",
         "installScript" : "[steps('clustersize').installScript]",
         "installCommand" : "[steps('clustersize').installCommand]",
