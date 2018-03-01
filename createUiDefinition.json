@@ -92,7 +92,7 @@
               "toolTip": "Number of Swarm worker nodes in the cluster.",
               "constraints": {
                   "required": false,
-                  "regex": "[0-9][1-9]",
+                  "regex": null,
                   "validationMessage": null
               },
               "visible": true
