@@ -91,7 +91,8 @@
               "defaultValue": 1,
               "toolTip": "Number of Swarm worker nodes in the cluster.",
               "constraints": {
-                  "required": true,                  
+                  "required": true,
+                  "regex": "^[1-9][0-9]?$|^100$",                  
                   "validationMessage": null
               },
               "visible": true              
