@@ -87,9 +87,15 @@
             {
               "name": "nodeCount",
               "type": "Microsoft.Common.TextBox",
-              "label": "Node Count",              
-              "toolTip": "Number of Swarm worker nodes in the cluster."                        
-          }, 
+              "label": "Node Count",
+              "defaultValue": 1,
+              "toolTip": "Number of Swarm worker nodes in the cluster.",
+              "constraints": {
+                  "required": true,
+                  "regex": "[0-9][1-9]",
+                  "validationMessage": null
+              }              
+          } 
           ]
         }
       ],
