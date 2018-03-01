@@ -83,7 +83,20 @@
               "toolTip": "Installation command.",
               "defaultValue": "sh installscript.sh",                      
               "osPlatform": "Linux"            
-            }
+            },
+            {
+              "name": "nodeCount",
+              "type": "Microsoft.Common.TextBox",
+              "label": "Node Count",
+              "defaultValue": "1",
+              "toolTip": "Number of Swarm worker nodes in the cluster.",
+              "constraints": {
+                  "required": false,
+                  "regex": "[0-9][1-9]",
+                  "validationMessage": null
+              },
+              "visible": true
+          }, 
           ]
         }
       ],
@@ -95,7 +108,8 @@
           "authenticationType": "[basics('sshPublicKey').authenticationType]",      
         "datanodeVmType" : "[steps('clustersize').clusterName]",
         "installScript" : "[steps('clustersize').installScript]",
-        "installCommand" : "[steps('clustersize').installCommand]"      
+        "installCommand" : "[steps('clustersize').installCommand]",
+        "nodeCount" : "[steps('clustersize').nodeCount]"      
         
       }
     }
